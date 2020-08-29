@@ -1,0 +1,27 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Add Student
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form class="add-details">
+        <mat-form-field class="add-userId">
+            <input [(ngModel)]="student.userId" matInput name="User_id" placeholder="User_id">
+        </mat-form-field>
+        <mat-form-field class="add-title">
+            <input [(ngModel)]="student.title" matInput name="Title" placeholder="Title">
+        </mat-form-field>
+        <mat-form-field class="add-body">
+            <input [(ngModel)]="student.body" matInput name="body" placeholder="Body">
+        </mat-form-field>
+    </form>
+    <button (click)="addStudent()" mat-button>Submit</button>
+</mat-expansion-panel>
+<h2>Display</h2>
+<table>
+    <tr *ngFor="let stud of studentList">
+        <td>{{stud.userId}}</td>
+        <td>{{stud.title}}</td>
+        <td>{{stud.body}}</td>
+    </tr>
+</table>

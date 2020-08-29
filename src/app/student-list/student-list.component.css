@@ -1,0 +1,7 @@
+.add-details {
+  display: flex;
+  flex-direction: column;
+}
+table {
+  border: 0.01px solid black;
+}
